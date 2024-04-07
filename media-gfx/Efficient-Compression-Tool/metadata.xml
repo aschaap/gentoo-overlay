@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>8865084+aschaap@users.noreply.github.com</email>
+		<name>A Schaap</name>
+	</maintainer>
+	<use>
+		<flag name="threads">Add multithreading support</flag>
+		<flag name="ectmp3">Add support for MP3 files (currently broken)</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">fhanau/Efficient-Compression-Tool</remote-id>
+	</upstream>
+</pkgmetadata>
