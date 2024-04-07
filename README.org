@@ -1,0 +1,15 @@
+* A. Schaap's Personal Gentoo Overlay
+
+A personal [[https://www.gentoo.org][Gentoo]] [[https://wiki.gentoo.org/wiki/Ebuild_repository][overlay]] with [[https://wiki.gentoo.org/wiki/Ebuild][ebuilds]] for software that mostly used to be kept in =/usr/local/bin= (self-compiled) or =/opt/bin= (pre-compiled) without being tracked by package management.
+Use at your own risk!
+
+** Installation
+#+begin_src shell
+eselect repository add aschaap git https://github.com/aschaap/gentoo-overlay.git
+#+end_src
+
+** Removal
+#+begin_src shell
+eselect repository disable aschaap
+eselect repository remove aschaap
+#+end_src
