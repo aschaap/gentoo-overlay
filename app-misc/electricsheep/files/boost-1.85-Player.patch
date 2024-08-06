@@ -1,0 +1,21 @@
+diff --git client_generic.orig/Client/Player.cpp client_generic/Client/Player.cpp
+index 1f65d76..fb031ed 100644
+--- client_generic.orig/Client/Player.cpp
++++ client_generic/Client/Player.cpp
+@@ -60,7 +60,7 @@
+ 
+ #include	"boost/filesystem/path.hpp"
+ #include	"boost/filesystem/operations.hpp"
+-#include	"boost/filesystem/convenience.hpp"
++#include	"boost/filesystem.hpp"
+ 
+ #if defined(MAC) || defined(WIN32)
+ 	#define HONOR_VBL_SYNC
+@@ -69,7 +69,6 @@
+ using boost::filesystem::path;
+ using boost::filesystem::exists;
+ using boost::filesystem::directory_iterator;
+-using boost::filesystem::extension;
+ 
+ using namespace DisplayOutput;
+ 

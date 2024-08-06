@@ -1,0 +1,19 @@
+diff --git client_generic.orig/Client/lua_playlist.h client_generic/Client/lua_playlist.h
+index 253c715..877bfea 100644
+--- client_generic.orig/Client/lua_playlist.h
++++ client_generic/Client/lua_playlist.h
+@@ -17,13 +17,12 @@
+ 
+ #include	"boost/filesystem/path.hpp"
+ #include	"boost/filesystem/operations.hpp"
+-#include	"boost/filesystem/convenience.hpp"
++#include	"boost/filesystem.hpp"
+ #include	<boost/thread.hpp>
+ 
+ using boost::filesystem::path;
+ using boost::filesystem::exists;
+ using boost::filesystem::directory_iterator;
+-using boost::filesystem::extension;
+ 
+ 
+ //	Lua.

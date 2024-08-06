@@ -1,0 +1,18 @@
+diff --git client_generic.orig/TupleStorage/luastorage.cpp client_generic/TupleStorage/luastorage.cpp
+index efbe886..20db063 100644
+--- client_generic.orig/TupleStorage/luastorage.cpp
++++ client_generic/TupleStorage/luastorage.cpp
+@@ -9,12 +9,11 @@
+ 
+ #include	"boost/filesystem/path.hpp"
+ #include	"boost/filesystem/operations.hpp"
+-#include	"boost/filesystem/convenience.hpp"
++#include	"boost/filesystem.hpp"
+ 
+ using boost::filesystem::path;
+ using boost::filesystem::exists;
+ using boost::filesystem::directory_iterator;
+-using boost::filesystem::extension;
+ 
+ using namespace std;
+ 
