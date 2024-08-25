@@ -29,7 +29,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "More or less abandonware. Author wants attribution."
+	elog "More or less abandonware. This binary is from 2007."
+	elog ""
+	elog "Author is deceased and wanted attribution."
 	elog ""
 	elog "Source not publicly available to the best of my knowledge."
 	elog ""

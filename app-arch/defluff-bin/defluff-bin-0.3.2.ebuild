@@ -31,7 +31,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "More or less abandonware."
+	elog "More or less abandonware. This binary is from 2011."
 	elog ""
 	elog "Source not publicly available to the best of my knowledge."
 	elog ""
