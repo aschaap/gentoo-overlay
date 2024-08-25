@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>8865084+aschaap@users.noreply.github.com</email>
+		<name>A Schaap</name>
+	</maintainer>
+	<use>
+		<flag name="upstream-cflags-only">Ignore CXXFLAGS from make.conf, compile as the developer intended (performanc?)</flag>
+		<flag name="static">Produce statically linked binary, as the developer intended (performance?)</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">packjpg/packJPG</remote-id>
+	</upstream>
+</pkgmetadata>
