@@ -6,7 +6,7 @@
 
 EAPI=8
 
-DESCRIPTION="A compression program for further compressing JPEG image files."
+DESCRIPTION="A compression program for further compressing JPEG image files [into its PJG format]."
 HOMEPAGE="http://packjpg.encode.su/"
 SRC_URI="https://github.com/packjpg/${PN}/archive//${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 MULTILIB_COMPAT=(abi_x86_{32,64} )
-IUSE="upstream-cflags-only static"
+IUSE="-custom-cflags +static"
 
 S=${WORKDIR}/${P}/source
 
@@ -29,8 +29,8 @@ src_prepare() {
 	# removing -fomit-frame-pointer; included with most -O levels
 	# removing -O3, -funroll-loops, -fomit-frame-pointer because they're typically in make.conf
 	# leaving -ffast-math and -fsched-spec-load and since they're fairly specific, and -Wall and -pedantic for debugging errors
-	if ! use upstream-cflags-only; then
-		sed -i 's/CPPFLAGS = -I. -O3 -Wall -pedantic -funroll-loops -ffast-math -fsched-spec-load -fomit-frame-pointer -std=c++14/CXXFLAGS+= -I. -Wall -pedantic -ffast-math -fsched-spec-load/' Makefile
+	if use custom-cflags; then
+		sed -i 's/CPPFLAGS = -I. -O3 -Wall -pedantic -funroll-loops -ffast-math -fsched-spec-load -fomit-frame-pointer -std=c++14/CXXFLAGS+= -I./' Makefile
 	fi
 
 	sed -i 's/CPPFLAGS/CXXFLAGS/g' Makefile
@@ -47,4 +47,8 @@ src_install() {
 	dobin ${PN}
 
 	dodoc ../Readme.txt
+}
+
+pkg_postinst() {
+	elog "Not actively developed. This version is from 2018."
 }
